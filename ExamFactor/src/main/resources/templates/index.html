@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Word File Text</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <style>
+     
+     
+     table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: auto;
+            text-align: left;
+            vertical-align: top;
+            padding-left: 5px;
+       }
+       table{
+       		width:80%;
+       		margin: auto;
+       }
+    </style>
+</head>
+<body>
+    <!-- <h1>Extracted Text:</h1>
+    <p th:text="${extractedText}"></p> -->
+    
+        
+   <table>
+    <tbody>
+      <tr th:each="row : ${tableData}">
+        <td th:each="cell : ${row}" th:text="${cell}"></td>
+      </tr>
+    </tbody>
+  </table>
+   
+   
+</body>
+</html>
